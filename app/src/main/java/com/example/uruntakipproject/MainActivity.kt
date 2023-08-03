@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 binding.qrCodeText.text = result.toString()
+
             }
 
         }
