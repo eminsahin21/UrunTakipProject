@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="126dp"
         android:layout_height="23dp"
-        android:text="Eynallı"
+        android:text="ŞAHİN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
