@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         const val RESULT = "RESULT"
     }
 
+    val personelNo_array: ArrayList<String> = ArrayList<String>()
+    val personelBirim_array: ArrayList<String> = ArrayList<String>()
+    val personelIsim_array: ArrayList<String> = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +29,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         myDb = DatabaseHandler(this)
 
+
+//        personelBirim_array.clear()
+//        personelIsim_array.clear()
+//        personelNo_array.clear()
 
         AddData()
 //        getData()
@@ -38,16 +45,25 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             val buffer =StringBuffer()
+//            buffer.delete(0, buffer.length)
+
             while (res.moveToNext()){
                 buffer.append("Id: " + res.getString(0)+"\n")
                 buffer.append("Name: " + res.getString(1)+"\n\n")
                 buffer.append("Birimi: " + res.getString(2)+"\n\n")
                 buffer.append("Code: " + res.getString(3)+"\n\n")
+
+                personelIsim_array.add(res.getString(1).toString())
+                personelBirim_array.add(res.getString(2).toString())
+                personelNo_array.add(res.getString(3).toString())
             }
-//                showMessage("Data",buffer.toString())
+//            showMessage("Data",buffer.toString())
 //            println("mehmet emşin")
         }
 
+            println(personelIsim_array)
+            println(personelBirim_array)
+            println(personelNo_array)
 
 
             binding.btnTara.setOnClickListener {
@@ -63,6 +79,22 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 } else {
                     binding.qrCodeText.text = result.toString()
+                    for (i in 0..personelNo_array.size-1){
+                        if (personelNo_array[i] == result.toString()){
+                            println("ife girdi")
+                            if (personelBirim_array[i].toInt() == 1){
+                                val intent = Intent(this, BantPersonelActivity::class.java)
+//                                intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
+                                startActivity(intent)
+                            }
+                            else{
+                                val intent = Intent(this, DepoPersoneliActivity::class.java)
+//                                intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
+                                startActivity(intent)
+                            }
+
+                        }
+                    }
 
                 }
 
@@ -74,9 +106,6 @@ class MainActivity : AppCompatActivity() {
     private fun getData() {
         binding.getData.setOnClickListener(View.OnClickListener {
 
-
-                
-                
         })
     }
 

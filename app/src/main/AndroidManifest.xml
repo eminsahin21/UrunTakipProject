@@ -17,6 +17,12 @@
         android:theme="@style/Theme.UrunTakipProject"
         tools:targetApi="31">
         <activity
+            android:name=".DepoPersoneliActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BantPersonelActivity"
+            android:exported="false" />
+        <activity
             android:name=".ScanActivity"
             android:exported="false" />
         <activity
