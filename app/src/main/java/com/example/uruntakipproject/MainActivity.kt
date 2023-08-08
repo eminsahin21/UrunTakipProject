@@ -84,12 +84,12 @@ class MainActivity : AppCompatActivity() {
                             println("ife girdi")
                             if (personelBirim_array[i].toInt() == 1){
                                 val intent = Intent(this, BantPersonelActivity::class.java)
-//                                intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
+                                intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
                                 startActivity(intent)
                             }
                             else{
                                 val intent = Intent(this, DepoPersoneliActivity::class.java)
-//                                intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
+                                intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
                                 startActivity(intent)
                             }
 
