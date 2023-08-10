@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgrounddeneme"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,100 +12,39 @@
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="88dp"
         android:layout_marginEnd="81dp"
-        android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btninsert" />
-
-    <TextView
-        android:id="@+id/qrCodeText2"
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="272dp"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qrCodeText"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnTara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginTop="316dp"
         android:background="@drawable/butonback"
         android:text="qr tara"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/codeText" />
-
-    <Button
-        android:id="@+id/btninsert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/butonback"
-        android:text="SET DATA"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTara" />
-
-    <Button
-        android:id="@+id/getData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="73dp"
-        android:background="@drawable/butonback"
-        android:text="get data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTara" />
-
-    <EditText
-        android:id="@+id/nameText"
-        style="@style/Widget.AppCompat.AutoCompleteTextView"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/qrCodeText"
+        app:layout_constraintEnd_toStartOf="@+id/adminbutton"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/codeText"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+    <Button
+        android:id="@+id/adminbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="316dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/butonback"
+        android:text="ADMİN"
+        app:layout_constraintBottom_toTopOf="@+id/qrCodeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birimText"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/birimText"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,5 +15,7 @@ class DepoPersoneliActivity : AppCompatActivity() {
         var depo =intent.getStringExtra("Key")
         textView.text = depo.toString()
 
+
+
     }
 }
