@@ -8,16 +8,18 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
 
-val DATABASE_NAME="son.db"
-val TABLE_NAME = "ketıl"
+val DATABASE_NAME="personeltakip.db"
+val TABLE_NAME = "personel"
 val COL_NAME ="NAME"
 val COL_BIRIM ="BIRIM"
 val COL_ID ="ID"
 val COL_CODENO ="CODE_NO"
 
-class DatabaseHandler(context:Context): SQLiteOpenHelper(context, DATABASE_NAME,null,1){
+class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,null,1){
+
     override fun onCreate(p0: SQLiteDatabase?) {
         p0?.execSQL("CREATE TABLE IF NOT EXISTS $TABLE_NAME(ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,BIRIM TEXT, CODE_NO TEXT)")
+
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {

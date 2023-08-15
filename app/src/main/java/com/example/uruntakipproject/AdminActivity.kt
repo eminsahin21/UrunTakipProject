@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 
 
 class AdminActivity : AppCompatActivity() {
@@ -57,7 +56,7 @@ class AdminActivity : AppCompatActivity() {
                     birimText.error="Enter codeNo"
                     return@setOnClickListener
                 }
-                val isInserted =myDb.insertData(name,birim,codeNo)
+                val isInserted = myDb.insertData(name,birim,codeNo)
                 if (isInserted==true){
                     Toast.makeText(this, "Data inserted", Toast.LENGTH_SHORT).show()
                 } else {
