@@ -23,7 +23,6 @@ class UrunDatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_
         p0?.execSQL("CREATE TABLE IF NOT EXISTS $TABLE_NAME_(ID INTEGER PRIMARY KEY AUTOINCREMENT,ULKE_KOD TEXT,ISLETME_KOD TEXT, URUN_KOD TEXT,KONTROL_KOD TEXT,BARKOD_NO TEXT)")
 
     }
-
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
     }
 

@@ -16,6 +16,5 @@ class DepoPersoneliActivity : AppCompatActivity() {
         textView.text = depo.toString()
 
 
-
     }
 }

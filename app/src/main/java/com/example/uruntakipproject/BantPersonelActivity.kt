@@ -16,7 +16,7 @@ class BantPersonelActivity : AppCompatActivity() {
     private lateinit var txtIsimBant: TextView
     private lateinit var urunTaraButon: Button
     lateinit var myDb: UrunDatabaseHandler
-    lateinit var strictmode : StrictMode
+
 
     companion object {
         const val RESULT = "RESULT"

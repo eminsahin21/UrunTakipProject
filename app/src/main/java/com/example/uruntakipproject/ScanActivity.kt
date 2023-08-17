@@ -65,10 +65,6 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
 
         }
 
-
-//        val intent = Intent(applicationContext,MainActivity::class.java)
-//        intent.putExtra(RESULT,p0.toString())
-//        startActivity(intent)
     }
 
     override fun onResume() {

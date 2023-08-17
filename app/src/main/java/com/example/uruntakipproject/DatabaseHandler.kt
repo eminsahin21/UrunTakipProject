@@ -15,6 +15,7 @@ val COL_BIRIM ="BIRIM"
 val COL_ID ="ID"
 val COL_CODENO ="CODE_NO"
 
+
 class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,null,1){
 
     override fun onCreate(p0: SQLiteDatabase?) {

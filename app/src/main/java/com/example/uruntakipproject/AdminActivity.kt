@@ -36,7 +36,6 @@ class AdminActivity : AppCompatActivity() {
         AddData()
 
     }
-
     private fun AddData() {
 
             buttonEkle.setOnClickListener(View.OnClickListener setOnClickListener@{

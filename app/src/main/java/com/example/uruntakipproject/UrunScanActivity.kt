@@ -53,7 +53,6 @@ class UrunScanActivity : AppCompatActivity(),ZXingScannerView.ResultHandler{
     }
 
 
-
     private fun setPermission(){
 
         val permission = ContextCompat.checkSelfPermission(this,android.Manifest.permission.CAMERA)
