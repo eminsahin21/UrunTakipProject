@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216515943500",
+    "project_id": "deneme123-dd3ba",
+    "storage_bucket": "deneme123-dd3ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216515943500:android:e987e7e81dc6a0cd04e8e9",
+        "android_client_info": {
+          "package_name": "com.example.uruntakipproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216515943500-t6lb9kd7ca0qvdmdm0l1d7hd1438bcaq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4BxeaLca1VJmdJ_YY79-2uP1NN0s6n1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216515943500-t6lb9kd7ca0qvdmdm0l1d7hd1438bcaq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

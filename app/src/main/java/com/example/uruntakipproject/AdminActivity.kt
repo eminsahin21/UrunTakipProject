@@ -8,6 +8,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class AdminActivity : AppCompatActivity() {
@@ -18,6 +20,7 @@ class AdminActivity : AppCompatActivity() {
     private lateinit var buttonEkle: Button
     private lateinit var eklenenKayitText: TextView
     lateinit var myDb:DatabaseHandler
+    private lateinit var dbRef: DatabaseReference
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,12 +36,17 @@ class AdminActivity : AppCompatActivity() {
         eklenenKayitText = findViewById(R.id.eklenenKayitText)
 
 
+        dbRef = FirebaseDatabase.getInstance().getReference("Personel");
+
         AddData()
 
     }
+
+
     private fun AddData() {
 
             buttonEkle.setOnClickListener(View.OnClickListener setOnClickListener@{
+
                 val name = nameText.text.toString().trim()
                 val birim = birimText.text.toString().trim()
                 val codeNo = codeText.text.toString().trim()
@@ -55,8 +63,23 @@ class AdminActivity : AppCompatActivity() {
                     birimText.error="Enter codeNo"
                     return@setOnClickListener
                 }
+                val perId =dbRef.push().key!!
+                val personel = PersonelModel(perId,name,birim,codeNo)
+
+                dbRef.child(name).setValue(personel)
+                    .addOnCompleteListener{
+                        Toast.makeText(this,"Data Eklendi Firebase",Toast.LENGTH_SHORT).show()
+                    }.addOnFailureListener{err->
+                        Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_SHORT).show()
+                        
+                    }
+
+
                 val isInserted = myDb.insertData(name,birim,codeNo)
                 if (isInserted==true){
+                    nameText.text.clear()
+                    codeText.text.clear()
+                    birimText.text.clear()
                     Toast.makeText(this, "Data inserted", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, "Data eklenemedi", Toast.LENGTH_SHORT).show()

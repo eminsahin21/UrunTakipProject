@@ -27,12 +27,12 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     fun insertData(name:String,birimi:String,code_no:String): Boolean? {
+
         val p0 =this.writableDatabase
         var cv =ContentValues()
         cv.put(COL_NAME,name)
         cv.put(COL_BIRIM,birimi)
         cv.put(COL_CODENO,code_no)
-
         var res =p0.insert(TABLE_NAME,null,cv)
 
         return !res.equals(-1)
