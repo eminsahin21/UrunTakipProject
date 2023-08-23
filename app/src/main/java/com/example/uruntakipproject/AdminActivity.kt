@@ -94,7 +94,6 @@ class AdminActivity : AppCompatActivity() {
 
                 println("Birimi:{$birim}")
 
-
                 val perId =dbRef.push().key!!
                 val personel = PersonelModel(perId,name,birim,codeNo)
 
