@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.zxing.Result
 import me.dm7.barcodescanner.zxing.ZXingScannerView
 
@@ -16,6 +18,7 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
 
     var scannerView: ZXingScannerView? = null
     lateinit var myDb: DatabaseHandler
+
 
     val personelNo_array: ArrayList<String> = ArrayList<String>()
     val personelBirim_array: ArrayList<String> = ArrayList<String>()
@@ -26,6 +29,7 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
         scannerView = ZXingScannerView(this)
         setContentView(scannerView)
         myDb = DatabaseHandler(this)
+
         setPermission()
         getData()
     }
@@ -47,12 +51,15 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
                             intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
                             x = 1
                             startActivity(intent)
-                        } else {
+                        } else if (personelBirim_array[i].toInt() == 2) {
                             val intent = Intent(this, DepoPersoneliActivity::class.java)
                             intent.putExtra("Key", personelIsim_array[i]) //veri gönderiliyor
                             x = 1
                             startActivity(intent)
-                        }
+                        }else if(personelBirim_array[i].toInt() == 1940){
+                            val intent = Intent(this, AdminActivity::class.java)
+                            x = 1
+                            startActivity(intent)}
 
                     }
                 }

@@ -56,11 +56,11 @@ class AdminActivity : AppCompatActivity() {
                     return@setOnClickListener
                 }
                 if (TextUtils.isEmpty(birim)){
-                    codeText.error="Enter birim no"
+                    birimText.error="Enter birim no"
                     return@setOnClickListener
                 }
                 if (TextUtils.isEmpty(codeNo)){
-                    birimText.error="Enter codeNo"
+                    codeText.error="Enter codeNo"
                     return@setOnClickListener
                 }
                 val perId =dbRef.push().key!!
