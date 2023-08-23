@@ -13,12 +13,12 @@
         android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginEnd="81dp"
-        android:layout_marginBottom="272dp"
+        android:layout_marginBottom="252dp"
         android:text=""
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -28,12 +28,10 @@
         android:layout_marginTop="316dp"
         android:background="@drawable/butonback"
         android:text="qr tara"
-        app:layout_constraintBottom_toTopOf="@+id/qrCodeText"
         app:layout_constraintEnd_toStartOf="@+id/adminbutton"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/adminbutton"
@@ -43,10 +41,8 @@
         android:layout_marginEnd="80dp"
         android:background="@drawable/butonback"
         android:text="ADMİN"
-        app:layout_constraintBottom_toTopOf="@+id/qrCodeText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
