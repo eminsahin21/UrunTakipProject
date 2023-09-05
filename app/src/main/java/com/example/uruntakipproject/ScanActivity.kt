@@ -58,10 +58,7 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
                         val intent = Intent(applicationContext, PersonelMainMenu::class.java)
                         intent.putExtra("Key", personel.perName) //veri gönderiliyor
                         intent.putExtra("birim", personel.perBirim) //veri gönderiliyor
-
                         startActivity(intent)
-
-
 
                     }
                 }

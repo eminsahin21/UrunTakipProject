@@ -12,7 +12,6 @@ import com.google.firebase.database.FirebaseDatabase
 class AdminActivity : AppCompatActivity() {
 
     private lateinit var nameText: EditText
-    private lateinit var birimText: EditText
     private lateinit var codeText: EditText
     private lateinit var buttonEkle: Button
     private lateinit var eklenenKayitText: TextView
