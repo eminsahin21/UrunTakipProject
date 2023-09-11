@@ -12,7 +12,7 @@ class PersonelMainMenu : AppCompatActivity() {
 
     private lateinit var personelNametext: TextView
     private lateinit var anaekranButon : ImageButton
-
+    var personelIsim =""
     private lateinit var bantA_btn:Button
     private lateinit var bantB_btn:Button
     private lateinit var depo_btn:Button
@@ -51,7 +51,7 @@ class PersonelMainMenu : AppCompatActivity() {
         }
 
 
-        val personelIsim = intent.getStringExtra("Key")
+        personelIsim = intent.getStringExtra("Key").toString()
 
 
 
@@ -93,14 +93,17 @@ class PersonelMainMenu : AppCompatActivity() {
         for (element in elements) {
             if (element == "1"){
                 val intent = Intent(this,BantPersonelActivity::class.java)
+                intent.putExtra("Pname", personelIsim) //veri gönderiliyor
                 startActivity(intent)
             }
             else if (element == "2"){
-                val intent = Intent(this,BantPersonelActivity::class.java)
+                val intent = Intent(this,BantBPersonelActivity::class.java)
+                intent.putExtra("Pname", personelIsim) //veri gönderiliyor
                 startActivity(intent)
             }
             else if (element == "3"){
                 val intent = Intent(this,DepoPersoneliActivity::class.java)
+                intent.putExtra("Pname", personelIsim) //veri gönderiliyor
                 startActivity(intent)
             }
             else if (element == "4"){

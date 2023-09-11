@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnTara.setOnClickListener {
             val intent = Intent(applicationContext, ScanActivity::class.java)
+            intent.putExtra("data","P" ) //veri gönderiliyor
             startActivity(intent)
 
         }

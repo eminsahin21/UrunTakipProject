@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pxfuel"
+    android:translationZ="-3dp"
     tools:context=".PersonelMainMenu">
 
     <Button
         android:id="@+id/bantBButton"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
+        android:background="@drawable/butonback"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:srcCompat="@drawable/butonback" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
         android:id="@+id/adminButton"
@@ -21,11 +24,11 @@
         android:layout_height="150dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="133dp"
+        android:background="@drawable/butonback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@drawable/butonback" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/personelAdiText"
@@ -35,6 +38,8 @@
         android:layout_marginEnd="191dp"
         android:gravity="center"
         android:text="deneme"
+        android:textColor="#F8F8F8"
+        android:textSize="20dp"
         app:fontFamily="@font/atomic_age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,22 +54,24 @@
         android:layout_height="150dp"
         android:layout_marginStart="47dp"
         android:layout_marginBottom="133dp"
+        android:background="@drawable/butonback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/adminButton"
         app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@drawable/butonback" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="72dp"
-        app:fontFamily="@font/atomic_age"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="40dp"
         android:text="ADMIN PANEL"
+        android:textColor="#F8F8F8"
+        android:textSize="20dp"
+        app:fontFamily="@font/atomic_age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personelAdiText" />
 
@@ -72,10 +79,12 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="52dp"
-        app:fontFamily="@font/atomic_age"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="44dp"
         android:text="DEPO"
+        android:textColor="#F8F8F8"
+        android:textSize="20dp"
+        app:fontFamily="@font/atomic_age"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personelAdiText" />
 
@@ -83,10 +92,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="120dp"
-        app:fontFamily="@font/atomic_age"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="112dp"
         android:text="BANT A"
+        android:textColor="#F8F8F8"
+        android:textSize="20dp"
+        app:fontFamily="@font/atomic_age"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,9 +105,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="84dp"
         android:text="BANT B"
+        android:textColor="#F8F8F8"
+        android:textSize="20dp"
         app:fontFamily="@font/atomic_age"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -106,11 +119,35 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:translationZ="-2dp"
+        android:background="@drawable/butonback"
         app:layout_constraintEnd_toStartOf="@+id/bantBButton"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:srcCompat="@drawable/butonback" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="95dp"
+        android:layout_height="100dp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bantaButton"
+        app:layout_constraintEnd_toEndOf="@+id/bantaButton"
+        app:layout_constraintStart_toStartOf="@+id/bantaButton"
+        app:layout_constraintTop_toTopOf="@+id/bantaButton"
+        app:srcCompat="@drawable/ic_round_format_paint_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="121dp"
+        android:layout_height="134dp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bantBButton"
+        app:layout_constraintEnd_toEndOf="@+id/bantBButton"
+        app:layout_constraintStart_toStartOf="@+id/bantBButton"
+        app:layout_constraintTop_toTopOf="@+id/bantBButton"
+        app:srcCompat="@drawable/ic_round_label_important_24" />
 
     <ImageButton
         android:id="@+id/homescreenButton"

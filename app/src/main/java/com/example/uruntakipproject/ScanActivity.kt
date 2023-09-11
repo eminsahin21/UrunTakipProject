@@ -29,7 +29,7 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
         myDb = DatabaseHandler(this)
 
         setPermission()
-        getData()
+//        getData()
     }
 
     private fun getDataFirebase(result: String) {
@@ -155,7 +155,7 @@ class ScanActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
         val res = myDb.getAllData()
 
         if (res.getCount() == 0) {
-            showMessage("error ", "Nothing Found")
+//            showMessage("error ", "Nothing Found")
         } else {
             val buffer = StringBuffer()
             while (res.moveToNext()) {

@@ -29,10 +29,19 @@ class UrunScanActivity : AppCompatActivity(),ZXingScannerView.ResultHandler{
 
 
     override fun handleResult(p0: Result?) {
-        val intent = Intent(applicationContext,BantPersonelActivity::class.java)
-        intent.putExtra(RESULT,p0.toString())
-        startActivity(intent)
-    }
+        val nereden = intent.getStringExtra("where")
+        if (nereden=="A"){
+            val intent = Intent(applicationContext,BantPersonelActivity::class.java)
+            intent.putExtra(RESULT,p0.toString())
+            startActivity(intent)
+        }
+        else if (nereden=="B"){
+            val intent = Intent(applicationContext,BantBPersonelActivity::class.java)
+            intent.putExtra(RESULT,p0.toString())
+            startActivity(intent)
+        }
+
+}
 
 
 

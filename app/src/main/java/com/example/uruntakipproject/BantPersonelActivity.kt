@@ -21,7 +21,6 @@ class BantPersonelActivity : AppCompatActivity() {
     private lateinit var addProductButton: Button
     private lateinit var txtIsimBant: TextView
     private lateinit var urunTaraButon: Button
-
     lateinit var myDb: UrunDatabaseHandler
     private lateinit var productsRef: DatabaseReference
 
@@ -44,7 +43,7 @@ class BantPersonelActivity : AppCompatActivity() {
             productsRef = FirebaseDatabase.getInstance().reference.child("products")
 
             // Eğer intent ile veri alınıyorsa
-            val personelIsim = intent.getStringExtra("Key")
+            val personelIsim = intent.getStringExtra("Pname")
             if (!personelIsim.isNullOrEmpty()) {
                 txtIsimBant.text = personelIsim
             }
@@ -52,14 +51,16 @@ class BantPersonelActivity : AppCompatActivity() {
 
            urunTaraButon.setOnClickListener {
                val intent = Intent(applicationContext, UrunScanActivity::class.java)
+               intent.putExtra("where","A" ) //veri gönderiliyor
                startActivity(intent)
            }
 
             val result = intent.getStringExtra(RESULT)
+            println("sonuc bu ---------"+ result)
 
             if (result != null){
                 txtIsimBant.text = result.toString()
-                AddDataToDB(result)
+//                AddDataToDB(result)
             }
 
 
@@ -97,7 +98,6 @@ class BantPersonelActivity : AppCompatActivity() {
 
         private fun AddDataToDB(result: String) {
             val ilkbarkod = result
-
             val isInserted = myDb.insertData(ilkbarkod)
             if (isInserted==true){
                 Toast.makeText(this, "Data inserted", Toast.LENGTH_SHORT).show()
