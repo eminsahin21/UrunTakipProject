@@ -17,7 +17,7 @@
         android:theme="@style/Theme.UrunTakipProject"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".BantBPersonelActivity"
             android:exported="false" />
         <activity
             android:name=".PersonelMainMenu"
@@ -38,7 +38,7 @@
             android:name=".ScanActivity"
             android:exported="false" />
         <activity
-            android:name=".BantBPersonelActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

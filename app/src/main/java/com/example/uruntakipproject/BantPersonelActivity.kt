@@ -66,7 +66,7 @@ class BantPersonelActivity : AppCompatActivity() {
 
             addProductButton.setOnClickListener {
                 val productName = productNameInput.text.toString()
-                val productPrice = productPriceInput.text.toString().toDoubleOrNull()
+                val productPrice = productPriceInput.text.toString()
 
                 if (!productName.isNullOrEmpty() && productPrice != null) {
                     val newProduct = mapOf(

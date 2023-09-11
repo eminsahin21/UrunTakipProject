@@ -70,48 +70,58 @@ class PersonelMainMenu : AppCompatActivity() {
     private val onButtonClickListener = View.OnClickListener { view ->
         when (view.id) {
             R.id.bantaButton -> {
-                yetkiKontrol()
+                yetkiKontrol(1)
             }
             R.id.bantBButton -> {
-                yetkiKontrol()
+                yetkiKontrol(2)
             }
             R.id.depoButton -> {
-                yetkiKontrol()
+                yetkiKontrol(3)
             }
             R.id.adminButton -> {
-                yetkiKontrol()
+                yetkiKontrol(4)
             }
         }
     }
 
 
-    private fun yetkiKontrol(){
+    private fun yetkiKontrol(i: Int) {
 
         val personelYetkinlik =intent.getStringExtra("birim").toString()
         val elements = personelYetkinlik.split(",").filter { it.isNotBlank() }
 
         for (element in elements) {
             if (element == "1"){
-                val intent = Intent(this,BantPersonelActivity::class.java)
-                intent.putExtra("Pname", personelIsim) //veri gönderiliyor
-                startActivity(intent)
+                if (i==1){
+                    val intent = Intent(this,BantPersonelActivity::class.java)
+                    intent.putExtra("Pname", personelIsim) //veri gönderiliyor
+                    startActivity(intent)
+                }
+
             }
             else if (element == "2"){
+                if (i==2){
                 val intent = Intent(this,BantBPersonelActivity::class.java)
                 intent.putExtra("Pname", personelIsim) //veri gönderiliyor
                 startActivity(intent)
+                }
             }
             else if (element == "3"){
+                if (i==3){
                 val intent = Intent(this,DepoPersoneliActivity::class.java)
                 intent.putExtra("Pname", personelIsim) //veri gönderiliyor
                 startActivity(intent)
+                }
             }
             else if (element == "4"){
                 //KONTROL ELEMANI
             }
             else if (element == "5"){
+                if (i==4){
+
                 val intent = Intent(this,AdminActivity::class.java)
                 startActivity(intent)
+            }
             }
 
         }

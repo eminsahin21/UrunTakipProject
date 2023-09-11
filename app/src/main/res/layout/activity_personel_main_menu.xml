@@ -127,28 +127,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="95dp"
-        android:layout_height="100dp"
-        android:translationZ="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bantaButton"
-        app:layout_constraintEnd_toEndOf="@+id/bantaButton"
-        app:layout_constraintStart_toStartOf="@+id/bantaButton"
-        app:layout_constraintTop_toTopOf="@+id/bantaButton"
-        app:srcCompat="@drawable/ic_round_format_paint_24" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="121dp"
-        android:layout_height="134dp"
-        android:translationZ="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bantBButton"
-        app:layout_constraintEnd_toEndOf="@+id/bantBButton"
-        app:layout_constraintStart_toStartOf="@+id/bantBButton"
-        app:layout_constraintTop_toTopOf="@+id/bantBButton"
-        app:srcCompat="@drawable/ic_round_label_important_24" />
-
     <ImageButton
         android:id="@+id/homescreenButton"
         android:layout_width="63dp"
